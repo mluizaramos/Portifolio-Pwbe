@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <h1>Exercicios no console - Java Script</h1>
+    <script>
+        // Exercicio 3
+        class Usuario {
+            constructor(nome, senha) {
+                this.nome = nome;
+                this.senha = senha;
+                this.logado = false;
+            }
+
+            fazerLogin(senha) {
+                if (senha === this.senha) {
+                    this.logado = true;
+                    console.log(`Usuário ${this.nome} logado com sucesso.`);
+                } else {
+                    console.log('Senha incorreta.');
+                }
+            }
+
+            fazerLogout() {
+                this.logado = false;
+                console.log(`Usuário ${this.nome} fez logout.`);
+            }
+        }
+
+        class SistemaAutenticacao {
+            constructor() {
+                this.usuarios = [];
+            }
+
+            registrarUsuario(usuario) {
+                this.usuarios.push(usuario);
+                console.log(`Usuário ${usuario.nome} registrado.`);
+            }
+
+            fazerLogin(nome, senha) {
+                const usuario = this.usuarios.find(user => user.nome === nome);
+                if (usuario) {
+                    usuario.fazerLogin(senha);
+                } else {
+                    console.log(`Usuário ${nome} não encontrado.`);
+                }
+            }
+
+            fazerLogout(nome) {
+                const usuario = this.usuarios.find(user => user.nome === nome);
+                if (usuario) {
+                    usuario.fazerLogout();
+                } else {
+                    console.log(`Usuário ${nome} não encontrado.`);
+                }
+            }
+        }
+
+ 
+        let sistema = new SistemaAutenticacao();
+
+        let usuario1 = new Usuario('amanda', 'amandinha');
+        let usuario2 = new Usuario('miguel', 'miguelito');
+
+        sistema.registrarUsuario(usuario1);
+        sistema.registrarUsuario(usuario2);
+
+        sistema.fazerLogin('amanda', 'amandinha');
+        sistema.fazerLogin('miguel', 'senhaerrada');
+
+        sistema.fazerLogout('amanda');
+
+    </script>
+</body>
+</html>
+
+    

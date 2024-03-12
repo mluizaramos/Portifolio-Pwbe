@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <script>
+        // exercicio 2 - pedra, papel, tesoura
+        // coputador é sempre 'Pedra'
+        var jogada = window.prompt(`Pedra, Papel e Tesoura. Qual voce escolhe?`);
+        while(true){
+            if (jogada.toLowerCase() === "Sair") {
+                window.alert('O jogo foi encerrado. Até logo!');
+                break;
+            } else if (jogada === "Pedra"){
+                window.alert('Empate!');
+            } else if(jogada === 'Tesoura'){
+                window.alert('Voce Perdeu!');
+            } else if(jogada === 'Papel'){
+                window.alert('Voce Ganhou!');
+            } else{
+                window.alert('Invalido');
+            }
+            jogada = window.prompt(`Pedra, Papel e Tesoura. Qual voce escolhe?`);
+        }
+
+
+    </script>
+</body>
+</html>
+
+    

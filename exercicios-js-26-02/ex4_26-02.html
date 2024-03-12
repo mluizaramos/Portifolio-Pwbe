@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <script>
+        // exercicios4
+        function calculadora(n1, n2){
+            n1 = parseFloat(window.prompt("Digite um numero: "))
+            operador = window.prompt("Escolha o operador: ")
+
+            if (operador !== 'sqrt' && operador !== '!' && operador !== 'fib'){
+                n2 = parseFloat(window.prompt("Digite outro numero: "))
+            }
+                
+            if (operador === '+'){
+                resultado = n1 + n2
+            }else if (operador === '-'){
+                resultado = n1 - n2
+            }else if (operador === '*'){
+                resultado = n1 * n2
+            }else if (operador === '/'){
+                resultado = n1 / n2
+            }else if (operador === 'sqrt'){
+                resultado = Math.sqrt(n1)
+            }else if (operador === '**'){
+                resultado = Math.pow(n1, n2)
+            }else if (operador === '%'){
+                resultado = (n1*n2 / 100)
+            }else if (operador === '!'){
+                resultado =  fatorial(n1)
+            }else if (operador === 'fib'){
+                resultado = fibonacci(n1)
+            }else{
+                resultado = 'operador ou numero invalido'
+            }
+            window.alert(resultado)
+        }
+
+        function fatorial(n1){
+            if (n1 === 0){
+                return 1;
+            } else{
+                let resultado = 1
+                    for (let i = 1; i <= n1; i ++){
+                        resultado *= i;
+                    } 
+                return resultado;
+            }
+        }
+
+        function fibonacci(n1){
+            if (n1 <= 1){
+                return n1
+            }
+            let fibPrev = 0
+            let fibAtual = 1
+            for (let i = 2; i <= n1; i++){
+                let temp = fibAtual
+                fibAtual += fibPrev
+                fibPrev = temp
+            }
+            return fibAtual
+        }
+
+
+        calculadora()
+
+    </script>
+</body>
+</html>

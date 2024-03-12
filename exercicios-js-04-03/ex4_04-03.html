@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <h1>Exercicios no Java Script</h1>
+    <script>
+        // Exercicio 4
+        // Desenvolva um programa que leia 10 números e apresente os valores pares. 
+        // Caso não tenha nenhum número par apresente a mensagem “Todos os números são ímpares.”
+
+        let numeros =[16, 82, 30, 48, 50, 66, 17, 8, 33, 12]
+       
+        let numerosPares = [];
+
+        for (let i = 0; i < numeros.length; i++) {
+            if (numeros[i] % 2 === 0) {
+                numerosPares.push(numeros[i]);
+            }
+        }
+
+        if (numerosPares.length > 0) {
+            alert("Números pares: " + numerosPares);
+        } else {
+            alert("Todos os numeros são ímpares.");
+        }
+
+    </script>
+</body>
+</html>
+
+    

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <h1>Exercicios no Java Script</h1>
+    <script>
+        // Exercicio 9
+        // Desenvolva um programa que leia 5 números inteiros e armazene em um vetor A. 
+        // Leia 5 números inteiros e armazene em um vetor B. 
+        // Carregue e apresente um vetor C com os valores de A e B alternados. 
+        function lerNumeros(tamanho) {
+            let vetor = [];
+            for (let i = 0; i < tamanho; i++) {
+                let numero = parseInt(prompt(`Digite o ${i + 1}º número:`));
+                vetor.push(numero);
+            }
+            return vetor;
+        }
+
+        function combinarVetores(vetorA, vetorB) {
+            let vetorC = [];
+            for (let i = 0; i < vetorA.length; i++) {
+                vetorC.push(vetorA[i]);
+                vetorC.push(vetorB[i]);
+            }
+            return vetorC;
+        }
+
+        let tamanho = 5;
+        let vetorA = lerNumeros(tamanho);
+        let vetorB = lerNumeros(tamanho);
+
+        let vetorC = combinarVetores(vetorA, vetorB);
+
+        alert("Vetor C combinado:");
+        alert(vetorC);
+
+
+    </script>
+</body>
+</html>
+
+    

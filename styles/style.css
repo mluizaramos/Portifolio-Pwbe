@@ -1,0 +1,292 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+ 
+}
+
+body{
+  height: 100%;
+  background-color: #05061f;
+  padding: 50px 220px 50px 220px;
+  font-family: 'Istok Web', sans-serif
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  color: #EDECEC;
+  margin-bottom: 100px;
+}
+
+.logo a{
+  font-size: 1.9rem;
+  font-weight: bold;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.links li {
+  margin: 30px;
+  font-size: 1.1rem;
+}
+
+.links a {
+  color: #EDECEC;
+  text-decoration: none;
+}
+
+.banner{
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  color: #EDECEC;
+  margin-bottom: 100px;
+}
+
+.texto{
+  flex: 1;
+  width: 50%;
+}
+
+.texto h2{
+  font-size: 2.9rem;
+  color: #EDECEC;;
+}
+
+.texto p{
+  margin-top: 40px;
+  color: #EDECEC;
+  font-size: 1.2em;
+
+}
+
+.imagem{
+  flex: 1;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.imagem img {
+  width: 70%;
+  margin-left: 150px;
+  color: linear-gradient(to right, #59fff1, #830FB8);
+  
+}
+
+.imagem{ animation: pulse 2s infinite;}
+@keyframes pulse{
+  0%,100%{transform: scale(1);}
+  50%{transform:scale(1.1);}
+}
+
+.titulo-s1{
+  font-size: 1.8rem;
+  text-align: center;
+  color: #EDECEC;
+  margin-bottom: 80px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards h2{
+  color: #EDECEC;
+  margin-top: 30px;
+}
+
+.cards .bloco-ret:hover{
+  border: 1px solid red;
+}
+
+.bloco-ret{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 300px;
+  padding-bottom: 0px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0.9, 0.9);
+  
+}
+
+.bloco-ret a:hover{
+  background-color: rgb(8, 39, 75);
+}
+
+.bloco {
+  width: 170px;
+  height: 170px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #EDECEC;
+  cursor: pointer;
+}
+
+.container2{
+  margin-top: 130px;
+}
+
+.container2 h2{
+  font-size: 2.2rem;
+  color: #EDECEC;
+  margin-bottom: 30px;
+}
+
+.container2 li{
+  font-size: 1.2rem;
+  color: #EDECEC;
+  margin-bottom: 10px;
+}
+
+.container2 h2:hover{
+  color: #4F6AC6;
+}
+
+.container2 p{
+  color: #EDECEC;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.container2 a{
+  color: #EDECEC;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.container2 button{
+  margin-top: 20px;
+  width: 200px;
+  height: 45px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  color: #EDECEC;
+}
+
+.container2 button:hover{
+  border: 5px solid black;
+}
+
+.container2{
+  display: flex;
+  color: #EDECEC;
+  margin-bottom: 100px;
+}
+
+.col1{
+  flex: 1;
+  width: 80%;
+}
+
+.col2{
+  flex: 1;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col2 img{
+  margin-left: 130px;
+}
+
+.col2{ animation: pulse 2s infinite;}
+@keyframes pulse{
+  0%,100%{transform: scale(1);}
+  50%{transform:scale(1.1);}
+}
+
+.pag-bloco {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.bloco-u {
+  width: 150px;
+  height: 150px;
+  text-decoration: none;
+  border: 2px solid #EDECEC;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+  margin: 10px; 
+  padding: 10px;
+  color: #EDECEC;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  font-size: 1.2rem;
+}
+
+.bloco-u:hover{
+  background-color: #EDECEC;
+  color: #05061f;
+  font-size: 1.3rem;
+}
+
+.conteudo{
+  color: #EDECEC;
+  
+}
+
+.conteudo h2{
+  color: #59fff1;
+  margin-bottom: 10px;
+  font-size: 1.9rem;
+}
+
+.conteudo h4{
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.cont{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cont2 li{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.cont2 h3{
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.cont2 p{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.cont2 h4{
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+

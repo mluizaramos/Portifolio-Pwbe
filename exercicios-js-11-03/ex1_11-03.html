@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <h1>Exercicios no console - Java Script</h1>
+    <script>
+        // Exercicio 1
+        class ContaBancaria {
+            constructor(saldo, tipo){
+                this.saldo = saldo;
+                this.tipo = tipo;
+            }
+
+            sacar(quantidade){
+                if(this.saldo >= quantidade && quantidade > 0){
+                    this.saldo -= quantidade;
+                    console.log(`Saque de ${quantidade} realizado com sucesso.`);
+                } else{
+                    console.log("Saldo insuficiente.");
+                }
+            }
+
+            depositar(quantidade){
+                if(quantidade > 0){
+                    this.saldo += quantidade;
+                    console.log(`Depósito de ${quantidade} realizado com sucesso.`);
+                } else{
+                    console.log("Deposite algum valor.");
+                }
+            }
+        }
+
+        class ContaCorrente extends ContaBancaria{
+            constructor(saldo){
+                super(saldo, "Corrente");
+            }
+        }
+
+        class ContaPoupanca extends ContaBancaria{
+            constructor(saldo, juros){
+                super(saldo, "Poupança");
+                this.juros = juros;
+            }
+
+            renderJuros(){
+                const jurosGanhos = this.saldo * (this.juros / 100);
+                this.saldo += jurosGanhos;
+                console.log(`Juros de ${jurosGanhos}. Saldo atual: ${this.saldo}`);
+            }
+        }
+
+        let conta1 = new ContaCorrente(3000);
+        console.log(conta1);
+        conta1.depositar(50);
+        console.log(conta1);
+        conta1.sacar(500);
+        console.log(conta1);
+
+        let conta2 = new ContaPoupanca(1300, 2);
+        console.log(conta2);
+        conta2.depositar(300);
+        console.log(conta2);
+        conta2.renderJuros();
+        console.log(conta2);
+
+    </script>
+</body>
+</html>
+
+    

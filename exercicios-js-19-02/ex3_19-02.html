@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <script>
+        var a = 0, b = 1;
+        var fibSequence = [a, b];
+
+        for (var i = 2; i < 10; i++) {
+            var c = a + b;
+            fibSequence.push(c);
+            a = b;
+            b = c;
+        }
+
+        alert("Os primeiros 10 números da sequência de Fibonacci são:\n" + fibSequence.join(", "));
+
+    </script>
+</body>
+</html>
+
+    

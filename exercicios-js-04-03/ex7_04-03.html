@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <h1>Exercicios no Java Script</h1>
+    <script>
+        // Exercicio 7
+        // Desenvolva uma nova versão do programa anterior em que o usuário terá a quantidade de tentativas limitada a 5. 
+        // Caso o nome seja encontrado apresente a posição (índice) onde ele está e em qual tentativa ele foi encontrado.
+
+        function buscarNumero(numero, vetor) {
+            let tentativa = 0;
+            for (let i = 0; i < vetor.length; i++) {
+                tentativa++;
+                if (vetor[i] === numero) {
+                    return { encontrado: true, posicao: i, tentativa: tentativa };
+                }
+            }
+            return { encontrado: false, posicao: -1, tentativa: tentativa };
+        }
+
+        function lerNumeros(tamanho) {
+            let vetor = [];
+            for (let i = 0; i < tamanho; i++) {
+                let numero = parseInt(prompt(`Digite o ${i + 1}º número:`));
+                vetor.push(numero);
+            }
+            return vetor;
+        }
+
+        let tamanho = 5;
+        let vetorA = lerNumeros(tamanho);
+
+        let numeroBusca = parseInt(prompt("Digite o número a ser buscado:"));
+
+        let resultadoBusca = buscarNumero(numeroBusca, vetorA);
+
+        if (resultadoBusca.encontrado) {
+            console.log(`O número ${numeroBusca} foi encontrado na posição ${resultadoBusca.posicao} na tentativa ${resultadoBusca.tentativa}.`);
+        } else {
+            console.log(`O número ${numeroBusca} não foi encontrado após ${resultadoBusca.tentativa} tentativas.`);
+        }
+
+    
+    </script>
+</body>
+</html>
+
+    

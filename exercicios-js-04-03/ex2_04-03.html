@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <h1>Exercicios no Java Script</h1>
+    <script>
+        // Exercicio 2
+        // Desenvolva um programa que a partir de um vetor de inteiros com 8 valores 
+        // inicializados na declaração apresente a média aritméticas desses valores.
+       
+        let numeros = [10, 20, 30, 40, 50, 60, 70, 80]
+
+        function mediaNumeros(numeros){
+            let soma = 0
+            for (let i = 0; i < numeros.length; i++) {
+                 soma += numeros[i] 
+            }
+            return soma / 8;
+        }
+        
+        let mediaAritmeticas = mediaNumeros(numeros)
+
+        alert("Numeros: " + numeros)
+        alert("Media: " + mediaAritmeticas)
+
+
+    </script>
+</body>
+</html>
+
+    

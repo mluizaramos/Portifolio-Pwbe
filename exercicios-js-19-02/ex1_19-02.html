@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <script>
+        //exercicio 1 - numero sorteado   
+        var min = 1;
+        var max = 100;
+        var chutes = 0
+
+        do {
+            var numeroAleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
+            window.alert(numeroAleatorio);
+            chutes++; 
+            var resposta = window.prompt(`É o número ${numeroAleatorio}? (responda 'acertou' ou 'errou')`);
+        } while (resposta === "errou");
+
+        window.alert(`Acertou em ${chutes} chutes!`)
+
+
+    </script>
+</body>
+</html>
+
+    

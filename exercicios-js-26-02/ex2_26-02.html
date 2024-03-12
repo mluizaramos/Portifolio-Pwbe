@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <script>
+        // exercicio 2
+         function parimpar(numero) {
+            if (numero % 2 == 0) {
+                return "par";
+            } else {
+                return "ímpar";
+            }
+        }
+
+        let inputNumero = prompt("Digite um número: ");
+        let numero = parseInt(inputNumero); 
+
+        if (!isNaN(numero)) { 
+            window.alert("O número é " + parimpar(numero));
+        } else {
+            window.alert("Insira um número válido.");
+        }
+
+    </script>
+</body>
+</html>

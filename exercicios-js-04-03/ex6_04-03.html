@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <h1>Exercicios no Java Script</h1>
+    <script>
+        // Exercicio 6
+        // Desenvolva um programa que leia 5 números inteiros e armazene em um vetor A. 
+        // Leia 5 números inteiros e armazene em um vetor B. 
+        // Carregue e apresente um vetor C com os valores de A e B alternados. 
+
+        let vetorA = [];
+        let vetorB = [];
+        let vetorC = [];
+
+        function lerNumeros() {
+            for (let i = 0; i < 5; i++) {
+                let numeroA = parseInt(prompt("Digite um número inteiro para o vetor A:"));
+                vetorA.push(numeroA);
+
+                let numeroB = parseInt(prompt("Digite um número inteiro para o vetor B:"));
+                vetorB.push(numeroB);
+            }
+        }
+
+        function criarVetorC() {
+            for (let i = 0; i < 5; i++) {
+                vetorC.push(vetorA[i]);
+                vetorC.push(vetorB[i]);
+            }
+        }
+
+
+        lerNumeros();
+        criarVetorC();
+        alert("Vetor C:", vetorC);
+
+
+    </script>
+</body>
+</html>

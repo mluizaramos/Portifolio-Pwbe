@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <h1>Exercicios no Java Script</h1>
+    <script>
+        // Exercicio 8
+        // Desenvolva um programa que leia 6 números inteiros e armazene em um vetor A. 
+        // Carregue um vetor B (de mesmo tipo e tamanho) com a metade dos valores armazenados em A. 
+        // Apresente os valores dos dois vetores.
+
+        function lerNumeros(tamanho) {
+            let vetor = [];
+            for (let i = 0; i < tamanho; i++) {
+                let numero = parseInt(prompt(`Digite o ${i + 1}º número:`));
+                vetor.push(numero);
+            }
+            return vetor;
+        }
+
+        function criarVetorB(vetorA) {
+            let vetorB = [];
+            for (let i = 0; i < vetorA.length; i++) {
+                vetorB.push(vetorA[i] / 2);
+            }
+            return vetorB;
+        }
+
+        let tamanho = 6;
+        let vetorA = lerNumeros(tamanho);
+
+        let vetorB = criarVetorB(vetorA);
+
+        alert("Valores do vetor A:");
+        alert(vetorA);
+        alert("Valores do vetor B (metade dos valores de A):");
+        alert(vetorB);
+
+    </script>
+</body>
+</html>
+
+    

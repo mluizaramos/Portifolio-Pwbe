@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <h1>Exercicios no console - Java Script </h1>
+    <script>
+        // Exercicio 2
+
+        class Livro {
+            constructor(nome, autor, id, categoria, quantidade){
+                this.nome = nome
+                this.autor = autor
+                this.id = id
+                this.categoria = categoria
+                this.quantidade = quantidade
+            }
+
+            emprestimo(){
+                if(this.quantidade > 0){
+                    console.log("Livro emprestado com sucesso")
+                } else{
+                    console.log("Livro não disponivel")
+                }
+            }
+
+            devolucao(){
+                if(this.quantidade >= 0){
+                    console.log("Livro emprestado com sucesso")
+                } else{
+                    console.log("Livro não disponivel")
+                }
+            }
+        }
+
+        let livro1 = new Livro("Percy Jackson","Rick Riordan", 1, "Fantasia", 3)
+
+        console.log(livro1)
+        livro1.emprestimo()
+       
+
+
+    </script>
+</body>
+</html>
+
+

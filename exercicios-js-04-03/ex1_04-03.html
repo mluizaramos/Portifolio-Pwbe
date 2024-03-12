@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <h1>Exercicios no Java Script</h1>
+    <script>
+        // Exercicio 1
+        // Desenvolva um programa que a partir de um vetor de inteiros com 5 valores inicializados 
+        // na declaração apresente o dobro de cada valor armazenado.
+
+        let numeros = [1, 2, 3, 4, 5]
+
+        function dobrarNumeros(numeros){
+            novosNumeros = []
+            for (let i = 0; i < numeros.length; i++) {
+                 novosNumeros.push(numeros[i] * 2);
+            }
+            return novosNumeros;
+        }
+        
+        let numerosDobardos = dobrarNumeros(numeros)
+
+        alert("Numeros: " + numeros)
+        alert("Numeros dobrados: " + numerosDobardos)
+
+    </script>
+</body>
+</html>
+
+    
